@@ -1,0 +1,600 @@
+:root {
+  --primary-color: #0b8f47;
+  --secondary-color: #d62828;
+  --background-light: #f9f9f9;
+  --text-color: #333;
+  --shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans Bengali", Arial, sans-serif;
+  background: var(--background-light);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, var(--primary-color), #34a853);
+  color: #fff;
+  text-align: center;
+  padding: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0;
+  font-size: inherit;
+}
+
+/* UPDATED BACKGROUNDS FOR CLASSIC LIGHT TONES */
+
+.container {
+  max-width: 800px;
+  margin: 1rem auto;
+  background: #faf9f7; /* নরম ক্রিমি গ্রে-বেজ */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 1rem auto;
+  background: #fdf6f0; /* খুব হালকা বাদামী টোন */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.product-slogan {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0.5rem 0;
+  background: #e6f4e9; /* হালকা সবুজ মিশ্রিত */
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.product-img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product-price {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+  background: #fff0f0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #777;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.features h2, .reviews h2 {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  margin: 0.5rem 0;
+  background: #e9f5ee; /* হালকা নরম গ্রিনি টোন */
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.features li, .review p {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: #f7fbff; /* খুব নরম নীলাভ */
+  border-radius: 5px;
+}
+
+.order-btn {
+  display: block;
+  text-align: center;
+  background: var(--secondary-color);
+  color: #fff;
+  padding: 0.6rem;
+  margin: 0.5rem auto;
+  width: 12rem;
+  border-radius: 12px; /* আগের মতো গোলাকার */
+  font-size: 1.2rem; /* এখানে ফন্ট সাইজ বাড়ালাম */
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+  min-height: 44px;
+}
+
+.order-btn:hover {
+  background: #a71d1d;
+  transform: scale(1.02);
+}
+
+
+.contact-box {
+  text-align: center;
+  background: #fff7eb; /* হালকা হলুদ বাদামী */
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+/* Accordion Styles */
+
+.accordion {
+  max-width: 500px;
+  margin: 20px auto;
+  font-family: "Noto Sans Bengali", Arial, sans-serif;
+}
+
+.accordion input[type="checkbox"] {
+  display: none;
+}
+
+.accordion label {
+  display: block;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 10px;
+  user-select: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  font-size: 1rem;
+}
+
+.accordion .content {
+  display: none;
+  background: #f1f7ff;
+  padding: 15px 20px;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.accordion input[type="checkbox"]:checked + label + .content {
+  display: block;
+}
+
+.form-header {
+  background: #4CAF50;
+  color: #fff;
+  padding: 0.6rem;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.3rem;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.form-group {
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+input[type="text"], input[type="tel"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  display: none;
+}
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  border: 1px solid #eee;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: #fcfaf8; /* নরম ক্রিমি */
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.product:hover {
+  transform: scale(1.02);
+}
+
+.product.selected {
+  background: #d9f2d9;
+  border-color: #4CAF50;
+}
+
+.product:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.product-left {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.product img {
+  width: 50px;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  min-width: 130px;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.quantity button {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.quantity button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quantity button:hover:not(:disabled) {
+  background: #e0e0e0;
+}
+
+.quantity input {
+  width: 35px;
+  text-align: center;
+  border: none;
+  font-size: 0.9rem;
+  margin: 0 0.3rem;
+  background: transparent;
+  pointer-events: none;
+  user-select: none;
+  font-weight: 700;
+}
+
+.summary {
+  margin-top: 0.8rem;
+  padding: 0.6rem;
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.payment-box {
+  background: #fff8db; /* হালকা প্যাস্টেল ইয়েলো */
+  padding: 0.6rem;
+  border-radius: 5px;
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.submit-btn {
+  background: var(--secondary-color);
+  color: #fff;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  min-height: 44px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #a93226;
+  transform: scale(1.02);
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.spinner {
+  display: none;
+  margin-left: 0.3rem;
+}
+
+#confirmation-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+#confirmation-modal .modal-content {
+  background: #fff;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#confirmation-modal button {
+  padding: 0.5rem 1rem;
+  margin: 0.3rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+#confirmation-modal .confirm-btn {
+  background: #4CAF50;
+  color: #fff;
+}
+
+#confirmation-modal .cancel-btn {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #fdf1e0, #f9e4c8); /* ক্রিমি-প্রিমিয়াম ব্যাকগ্রাউন্ড */
+  color: #333;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 3px solid #d4af37;
+  box-shadow: 0 -3px 6px rgba(0,0,0,0.1);
+}
+
+.footer-container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  width: 320px;             /* একটু বড় */
+  max-width: 100%;          /* রেসপনসিভ */
+  margin: 0 auto 30px auto; /* উপরে-নিচে স্পেস, মাঝখানে সেন্টার */
+  display: block;           /* ইমেজ ব্লক এলিমেন্টে কনভার্ট */
+  object-fit: contain;      /* ইমেজ বিকৃত না হয়ে সুন্দর দেখাবে */
+}
+
+.footer-description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.footer-phone-link,
+.whatsapp-btn {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 30px;
+  margin: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-phone-link {
+  background-color: #0066cc;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+.footer-phone-link:hover {
+  background-color: #004999;
+  transform: translateY(-3px);
+}
+
+.whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+.whatsapp-btn:hover {
+  background-color: #1ebe5d;
+  transform: translateY(-3px);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.footer-links li {
+  margin: 5px 0;
+}
+
+.footer-link {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-link i {
+  margin-right: 6px;
+  color: #d4af37; /* গোল্ড টাচ */
+}
+.footer-link:hover {
+  color: #d4af37;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  font-size: 14px;
+  color: #555;
+}
+
+.footer-bottom a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: bold;
+}
+.footer-bottom a:hover {
+  color: #b8860b;
+}
+/* Responsive for small screens */
+
+@media (max-width: 480px) {
+  .product {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .quantity {
+    min-width: auto;
+    margin-top: 0.5rem;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .quantity button {
+    min-width: 36px;
+    min-height: 36px;
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .quantity input {
+    width: 40px;
+    font-size: 16px;
+  }
+
+  .order-btn {
+    width: 100%;
+  }
+
+  .footer-container {
+    padding: 0 15px;
+  }
+}
+
+/* স্টক আউট প্রোডাক্ট স্টাইল */
+.product.disabled {
+  opacity: 0.5;         /* হালকা ফেড হয়ে যাবে */
+  pointer-events: none; /* ক্লিক করা যাবে না */
+  cursor: not-allowed;  /* মাউস নিয়ে গেলে not-allowed দেখাবে */
+} 
+/* scroling button */
+#back-to-top {
+  display: none;          /* ডিফল্টে লুকানো */
+  position: fixed;        /* স্ক্রিনে ফিক্সড থাকবে */
+  bottom: 20px;           /* নিচ থেকে 20px */
+  right: 20px;            /* ডান থেকে 20px */
+  padding: 10px 15px;     /* ভেতরে প্যাডিং */
+  font-size: 18px;        /* টেক্সট সাইজ */
+  border-radius: 50%;     /* গোলাকার */
+  background: #333;       /* কালো ব্যাকগ্রাউন্ড */
+  color: #fff;            /* সাদা টেক্সট */
+  cursor: pointer;        /* হোভার করলে হাতের আইকন */
+  z-index: 999;           /* সব কিছুর উপর ভাসবে */
+}
+ /* timer baner */
+.offer-banner {
+  background: linear-gradient(90deg, #ff6a00, #ffcc00);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+#countdown {
+  margin-top: 8px;
+  font-size: 22px;
+  color: #222;
+  background: #fff;
+  padding: 5px 12px;
+  border-radius: 6px;
+  display: inline-block;
+}
